@@ -28,5 +28,5 @@
 
 ## 開發者資訊
 
-作者：ahbiee
+作者：ahbiee<br>
 聯絡我：james35744@gmail.com
