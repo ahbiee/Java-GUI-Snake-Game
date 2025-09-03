@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.awt.Point;
 
 import javax.swing.*;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -26,10 +25,8 @@ public class GamePanel extends JPanel{
     static final int BLOCK_SIZE = 50;
     static final int xBlocks = PANEL_WIDTH / BLOCK_SIZE;
     static final int yBlocks = PANEL_HEIGHT / BLOCK_SIZE;
-    static final int INITIAL_DELAY_MS = 150;
     static final double SPEED_MULTIPLIER = 0.9;
 
-    int delay = INITIAL_DELAY_MS;
     int score = 0;
     int foodX = 0;
     int foodY = 0;
@@ -37,6 +34,9 @@ public class GamePanel extends JPanel{
     char direction = 'd';
     boolean directionChanged = false;
     boolean isRunning = false;
+    int difficulty = 150;
+    int delay = difficulty;
+    int scoreFactor = 4;
 
     GameFrame gameFrame;
 
@@ -59,12 +59,9 @@ public class GamePanel extends JPanel{
         this.gameFrame = frame;
         random = new Random();
         snake = new LinkedList<>();
-        timer = new Timer(INITIAL_DELAY_MS, new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                move();
-                repaint();
-            }
+        timer = new Timer(delay, e->{
+            move();
+            repaint();
         });
 
         setKeyBindings();
@@ -125,7 +122,11 @@ public class GamePanel extends JPanel{
     }
 
     public void startGame(){
-        delay = INITIAL_DELAY_MS;
+        difficulty = gameFrame.getDifficulty();
+        delay = difficulty;
+        if(difficulty == 100) scoreFactor = 3;
+        else if(difficulty == 150) scoreFactor = 4;
+        else scoreFactor = 5;
         timer.setDelay(delay);
         level = 0;
         score = 0;
@@ -168,7 +169,7 @@ public class GamePanel extends JPanel{
         if(Objects.equals(snake.getFirst(), new Point(foodX, foodY))){
             ++score;
             playEatSound();
-            if(score % 3 == 0 && level < 5){
+            if(score % scoreFactor == 0 && level < 5){
                 delay = (int)(delay*SPEED_MULTIPLIER);
                 playLevelUpSound();
                 ++level;

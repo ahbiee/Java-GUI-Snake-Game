@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 
 public class GameFrame extends JFrame{
     private int score = 0;
+    private int difficulty = 150;
 
     CardLayout cardLayout;
     JPanel mainPanel;
@@ -50,7 +51,13 @@ public class GameFrame extends JFrame{
         else if("GameOver".equals(panelName)){gameOverPanel.setScore();}
     }
 
-    public void setScore(int score){this.score = score;}
+    public void setScore(int score){
+        if(score >= 0) this.score = score;
+    }
 
     public int getScore(){return score;}
+
+    public void setDifficulty(int difficulty){this.difficulty = difficulty;}
+
+    public int getDifficulty(){return difficulty;}
 }
