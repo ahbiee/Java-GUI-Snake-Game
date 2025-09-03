@@ -32,7 +32,7 @@
 <br>
 
 ## 執行方式
-下載Releases中的exe檔案，點開即可遊玩
+下載Releases中的.exe或.jar檔案，點開即可遊玩
 
 ## 開發者資訊
 
