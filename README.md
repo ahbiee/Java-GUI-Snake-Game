@@ -13,19 +13,22 @@
 [![2025-09-01-124654.png](https://i.postimg.cc/pVkrcBkG/2025-09-01-124654.png)](https://postimg.cc/Sj2mJCBC)
 <br>
 
-- 設定頁面（未完成，將加入設定音效、難度控制與顏色選擇功能）
+- 設定頁面（已完成：難度設定，未完成：音量設定、選擇顏色）
+難度設定
+[![image.png](https://i.postimg.cc/XNmHFjDP/image.png)](https://postimg.cc/G9PxnCRP)
+
 <br>
 
 - 遊戲本體
 [![2025-09-01-124700.png](https://i.postimg.cc/TY4wfYzn/2025-09-01-124700.png)](https://postimg.cc/D81FcFyz)
 <br>
 
-- 依據分數提高速度，最多提升五次
+- 依據分數與難度提高速度，最多提升五次
 [![2025-09-01-124756.png](https://i.postimg.cc/7ZJL6r4d/2025-09-01-124756.png)](https://postimg.cc/3k7hS6dF)
 <br>
 
 - 遊戲結束畫面
-[![2025-09-01-124805.png](https://i.postimg.cc/6Qd5rVyh/2025-09-01-124805.png)](https://postimg.cc/zLGr5gwL)
+[![image.png](https://i.postimg.cc/250T5rZ2/image.png)](https://postimg.cc/06J7WgZw)
 <br>
 
 ## 執行方式
@@ -34,4 +37,6 @@
 ## 開發者資訊
 
 作者：ahbiee<br>
-聯絡我：james35744@gmail.com
+聯絡我：<br>
+- Mail: james35744@gmail.com
+- Discord: 白仔#0471
