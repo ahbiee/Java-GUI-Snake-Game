@@ -34,9 +34,7 @@
 
 ## 遊戲畫面展示
 <div align="center">
-<a href = "https://giphy.com/embed/PnMNzwiIazt65jCiQi">
 <iframe src="https://giphy.com/embed/PnMNzwiIazt65jCiQi" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-</a>
 </div>
 
 ## 開發者資訊
