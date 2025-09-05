@@ -13,10 +13,8 @@
 [![2025-09-01-124654.png](https://i.postimg.cc/pVkrcBkG/2025-09-01-124654.png)](https://postimg.cc/Sj2mJCBC)
 <br>
 
-- 設定頁面（已完成：難度設定，未完成：音量設定、選擇顏色）
-難度設定
-[![image.png](https://i.postimg.cc/XNmHFjDP/image.png)](https://postimg.cc/G9PxnCRP)
-
+- 設定頁面
+[![image.png](https://i.postimg.cc/fyR8JLFt/image.png)](https://postimg.cc/Pp0W7tdT)
 <br>
 
 - 遊戲本體
@@ -33,6 +31,10 @@
 
 ## 執行方式
 下載Releases中的.exe或.jar檔案，點開即可遊玩
+
+## 遊戲畫面展示
+
+<iframe src="https://giphy.com/embed/PnMNzwiIazt65jCiQi" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/PnMNzwiIazt65jCiQi">via GIPHY</a></p>
 
 ## 開發者資訊
 
