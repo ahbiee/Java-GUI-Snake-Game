@@ -33,8 +33,11 @@
 下載Releases中的.exe或.jar檔案，點開即可遊玩
 
 ## 遊戲畫面展示
-
-<iframe src="https://giphy.com/embed/PnMNzwiIazt65jCiQi" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/PnMNzwiIazt65jCiQi">via GIPHY</a></p>
+<div align="center">
+<a href = "https://giphy.com/embed/PnMNzwiIazt65jCiQi">
+<iframe src="https://giphy.com/embed/PnMNzwiIazt65jCiQi" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</a>
+</div>
 
 ## 開發者資訊
 
