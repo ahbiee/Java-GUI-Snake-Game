@@ -34,7 +34,7 @@
 
 ## 遊戲畫面展示
 
-[![遊戲展示影片]](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmh0ajZxcXR0bTNkNHJ1ODRiN2ptc3FxNW9hZ29nd3ZzcjB5ZGtlYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PnMNzwiIazt65jCiQi/giphy.gif)
+[![遊戲展示影片](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmh0ajZxcXR0bTNkNHJ1ODRiN2ptc3FxNW9hZ29nd3ZzcjB5ZGtlYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PnMNzwiIazt65jCiQi/giphy.gif)](https://giphy.com/gifs/PnMNzwiIazt65jCiQi)
 
 ## 開發者資訊
 
