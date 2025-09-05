@@ -16,9 +16,10 @@ public class MenuPanel extends JPanel{
     JButton startButton;
     JButton settingButton;
     JButton helpButton;
+    JButton exitButton;
 
-    Font titleFont = new Font("MV Boli", Font.BOLD, 100);;
-    Font selectFont = new Font("宋体", Font.PLAIN, 30);;
+    Font titleFont = new Font("MV Boli", Font.BOLD, 100);
+    Font selectFont = new Font("宋体", Font.PLAIN, 30);
 
     Color wordC = Color.WHITE;
     Color backgroundC = Color.darkGray;
@@ -69,6 +70,16 @@ public class MenuPanel extends JPanel{
         helpButton.setBounds(200, 390, 400, 50);
         helpButton.addActionListener(e->gameFrame.showPanel("Help"));
 
+        exitButton = new JButton("EXIT →");
+        exitButton.setFont(new Font("Times New Roman", Font.ITALIC, 30));
+        exitButton.setForeground(wordC);
+        exitButton.setBackground(backgroundC);
+        exitButton.setBorderPainted(false);
+        exitButton.setFocusPainted(false);
+        exitButton.setBounds(575, 400, 200, 50);
+        exitButton.addActionListener(e->System.exit(0));
+
+        this.add(exitButton);
         this.add(startButton);
         this.add(settingButton);
         this.add(helpButton);

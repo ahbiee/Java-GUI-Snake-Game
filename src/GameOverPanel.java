@@ -11,6 +11,7 @@ public class GameOverPanel extends JPanel{
     GameFrame gameFrame;
     JButton homeButton;
     JButton newGameButton;
+    JButton exitButton;
 
     JLabel gameOverLabel;
     JLabel gameOverLabel2;
@@ -65,6 +66,16 @@ public class GameOverPanel extends JPanel{
         newGameButton.setBounds(200, 330, 400, 50);
         newGameButton.addActionListener(e->gameFrame.showPanel("Game"));
 
+        exitButton = new JButton("EXIT →");
+        exitButton.setFont(new Font("Times New Roman", Font.ITALIC, 30));
+        exitButton.setForeground(Color.WHITE);
+        exitButton.setBackground(Color.darkGray);
+        exitButton.setBorderPainted(false);
+        exitButton.setFocusPainted(false);
+        exitButton.setBounds(575, 400, 200, 50);
+        exitButton.addActionListener(e->System.exit(0));
+
+        this.add(exitButton);
         this.add(gameOverLabel);
         this.add(gameOverLabel2);
         this.add(newGameButton);

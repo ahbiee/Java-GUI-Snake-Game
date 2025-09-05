@@ -16,6 +16,7 @@ import java.awt.BasicStroke;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 
@@ -54,6 +55,10 @@ public class GamePanel extends JPanel{
     Clip eatSound;
     Clip gameOverSound;
     Clip levelUpSound;
+
+    FloatControl eatControl;
+    FloatControl levelUpControl;
+    FloatControl gameOverControl;
 
     GamePanel(GameFrame frame){
         this.gameFrame = frame;
@@ -134,6 +139,8 @@ public class GamePanel extends JPanel{
         direction = 'd';
         directionChanged = false;
 
+        checkSnakeColor();
+        updateSoundVolume();
         initSnake();
         newFood();
         timer.start();
@@ -267,16 +274,19 @@ public class GamePanel extends JPanel{
             AudioInputStream audioInputStream1 = AudioSystem.getAudioInputStream(new BufferedInputStream(is1));
             eatSound = AudioSystem.getClip();
             eatSound.open(audioInputStream1);
+            eatControl = (FloatControl) eatSound.getControl(FloatControl.Type.MASTER_GAIN);
 
             InputStream is2 = Objects.requireNonNull(getClass().getResourceAsStream("/gameOver.wav"));
             AudioInputStream audioInputStream2 = AudioSystem.getAudioInputStream(new BufferedInputStream(is2));
             gameOverSound = AudioSystem.getClip();
             gameOverSound.open(audioInputStream2);
+            gameOverControl = (FloatControl) gameOverSound.getControl(FloatControl.Type.MASTER_GAIN);
 
             InputStream is3 = Objects.requireNonNull(getClass().getResourceAsStream("/levelUp.wav"));
             AudioInputStream audioInputStream3 = AudioSystem.getAudioInputStream(new BufferedInputStream(is3));
             levelUpSound = AudioSystem.getClip();
             levelUpSound.open(audioInputStream3);
+            levelUpControl = (FloatControl) levelUpSound.getControl(FloatControl.Type.MASTER_GAIN);
         }
         catch(Exception e){
             System.out.println("Error: " + e);
@@ -293,5 +303,23 @@ public class GamePanel extends JPanel{
         if(levelUpSound.isRunning()) levelUpSound.stop();
         levelUpSound.setFramePosition(0);
         levelUpSound.start();
+    }
+
+    public void updateSoundVolume(){
+        float volume = gameFrame.getVolume();
+        eatControl.setValue(volume);
+        gameOverControl.setValue(volume);
+        levelUpControl.setValue(volume);
+    }
+
+    private void checkSnakeColor(){
+        String color = gameFrame.getColor();
+        if(color.equals("綠色 Green")) snakeC = Color.GREEN;
+        else if(color.equals("藍色 Blue")) snakeC = Color.CYAN;
+        else if(color.equals("粉色 Pink")) snakeC = Color.PINK;
+        else{
+            snakeC = Color.GREEN;
+            System.out.println("Error Occurred at checkSnakeColor");
+        }
     }
 }

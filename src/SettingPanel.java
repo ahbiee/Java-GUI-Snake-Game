@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public class SettingPanel extends JPanel{
     static final int PANEL_WIDTH = 800;
@@ -14,8 +15,16 @@ public class SettingPanel extends JPanel{
     JRadioButton hardButton;
     ButtonGroup difficultyGroup;
 
+    JSlider soundSlider;
+
+    String[] colors;
+    JComboBox<String> colorChooser;
+    String colorChose = "Green";
+
     Font difficultyFont;
     JLabel setDifficulty;
+    JLabel setSound;
+    JLabel setColor;
 
     SettingPanel(GameFrame frame){
         difficultyFont = new Font("MV Boli", Font.BOLD, 20);
@@ -42,6 +51,8 @@ public class SettingPanel extends JPanel{
         this.add(homeButton);
 
         setDifficulty();
+        setSlider();
+        setColor();
     }
 
     private void setDifficulty(){
@@ -97,5 +108,59 @@ public class SettingPanel extends JPanel{
         this.add(easyButton);
         this.add(mediumButton);
         this.add(hardButton);
+    }
+
+    private void setSlider(){
+        setSound = new JLabel("Sound Volume:");
+        setSound.setFont(new Font("MV Boli", Font.BOLD, 30));
+        setSound.setForeground(Color.WHITE);
+        setSound.setBackground(Color.darkGray);
+        setSound.setBounds(50, 200, 300, 50);
+
+        soundSlider = new JSlider(0, 100, 100);
+        soundSlider.setBounds(300, 200, 400, 50);
+        soundSlider.setForeground(Color.WHITE);
+        soundSlider.setBackground(Color.darkGray);
+
+        soundSlider.setPaintTicks(true);
+        soundSlider.setPaintTrack(true);
+        soundSlider.setMajorTickSpacing(25);
+        soundSlider.setPaintLabels(true);
+        soundSlider.addChangeListener(e ->{
+            int soundVolume = soundSlider.getValue();
+            float volume;
+            if(soundVolume == 0) volume = -80.0f;
+            else volume = (float)(Math.log10(soundVolume / 100.0) * 20.0);
+
+            gameFrame.setVolume(volume);
+            gameFrame.gamePanel.updateSoundVolume();
+        });
+
+        this.add(setSound);
+        this.add(soundSlider);
+    }
+
+    private void setColor(){
+        colors = new String[] {"綠色 Green", "藍色 Blue", "粉色 Pink"};
+
+        setColor = new JLabel("Snake's Color:");
+        setColor.setFont(new Font("MV Boli", Font.BOLD, 30));
+        setColor.setForeground(Color.WHITE);
+        setColor.setBackground(Color.darkGray);
+        setColor.setBounds(50, 300, 300, 50);
+
+        colorChooser = new JComboBox<>(colors);
+        colorChooser.setSelectedIndex(0);
+        colorChooser.setBounds(300, 300, 400, 50);
+        colorChooser.setBackground(Color.lightGray);
+        colorChooser.setForeground(Color.BLACK);
+        colorChooser.setFont(new Font("宋体", Font.PLAIN, 30));
+        colorChooser.addActionListener(e -> {
+            colorChose = Objects.requireNonNull(colorChooser.getSelectedItem()).toString();
+            gameFrame.setColor(colorChose);
+        });
+
+        this.add(setColor);
+        this.add(colorChooser);
     }
 }
