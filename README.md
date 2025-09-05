@@ -33,9 +33,8 @@
 下載Releases中的.exe或.jar檔案，點開即可遊玩
 
 ## 遊戲畫面展示
-<div align="center">
-<iframe src="https://giphy.com/embed/PnMNzwiIazt65jCiQi" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-</div>
+
+[![遊戲展示影片]](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmh0ajZxcXR0bTNkNHJ1ODRiN2ptc3FxNW9hZ29nd3ZzcjB5ZGtlYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PnMNzwiIazt65jCiQi/giphy.gif)
 
 ## 開發者資訊
 
