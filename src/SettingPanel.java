@@ -19,7 +19,6 @@ public class SettingPanel extends JPanel{
 
     String[] colors;
     JComboBox<String> colorChooser;
-    String colorChose = "Green";
 
     Font difficultyFont;
     JLabel setDifficulty;
@@ -156,7 +155,7 @@ public class SettingPanel extends JPanel{
         colorChooser.setForeground(Color.BLACK);
         colorChooser.setFont(new Font("宋体", Font.PLAIN, 30));
         colorChooser.addActionListener(e -> {
-            colorChose = Objects.requireNonNull(colorChooser.getSelectedItem()).toString();
+            String colorChose = Objects.requireNonNull(colorChooser.getSelectedItem()).toString();
             gameFrame.setColor(colorChose);
         });
 

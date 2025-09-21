@@ -35,7 +35,7 @@ public class HelpPanel extends JPanel{
     private void setLabel(){
         label = new JLabel();
         label.setFont(new Font("MV Boli", Font.BOLD, 50));
-        label.setText("<html>HOW TO PLAY：<br>用WASD控制上下左右<br>記得要切成英文輸入法!<br>有任何問題歡迎聯絡作者</html>");
+        label.setText("<html>HOW TO PLAY：<br>用WASD控制上下左右<br>記得要切成英文輸入法!</html>");
         label.setForeground(Color.WHITE);
         label.setBounds(150, 50, 600, 300);
         label.setFocusable(false);
