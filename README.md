@@ -29,7 +29,7 @@
 [![2025-09-01-124756.png](https://i.postimg.cc/7ZJL6r4d/2025-09-01-124756.png)](https://postimg.cc/3k7hS6dF)
 <br>
 
-- **End 遊戲結束畫面**
+- **End 遊戲結束畫面**：顯示已選難度與最終分數
 [![image.png](https://i.postimg.cc/250T5rZ2/image.png)](https://postimg.cc/06J7WgZw)
 <br>
 
